@@ -6,9 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OronPaz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Oron Paz</h1>
-    <p>this is my website haha oron paz</p>
-</body>
+    <header class="header">
+        <div class="header__background">   
+        </div>
+        <div class="header__content">
+            <a href="#" class="nav__link">
+              <h2>OronPaz</h2>
+            </a>
+    
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Home</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Projects</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">About</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+    </header>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        if($(this).scrollTop() > 100){
+          $(".header__background").css({"opacity" : "1"})
+        }
+        else {
+          $(".header__background").css({"opacity" : "0"})
+        }
+      })
+    })
+    </script>
+    <div class="introduction">
+        <p class="intro__text">Hey, I'm Oron, im a software developer. Welcome to my personal site where I share my projects, experiences and whatever I feel like putting here.</p>
+    </div>
+
+
+    </body>
 </html>
