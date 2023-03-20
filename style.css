@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(/Snow.jpg);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    height: 5000px;
+    padding-top: 20px;
+    overscroll-behavior: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .header{
+    z-index: 950;
+    position: fixed;
+    width: 100%;
+    top: 0.5; 
+    
+    
+  }
+  
+  .header__content {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+    max-width: 1200px;
+    padding: 0 70px;
+    margin: 0 auto;
+    
+  }
+  
+  
+  
+  .nav {
+  
+  }
+  
+  .nav__list {
+    display: flex;
+    column-gap: 40px;
+  }
+  
+  .nav__item {
+  
+  }
+  
+  .nav__link {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    transition: all 0.4s;
+    position: relative;
+  }
+  
+  .nav__link:hover,
+  .nav__link:focus {
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  .nav__link::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: all 0.167s;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .nav__link:hover::after {
+    opacity: 1;
+  }
+  
+  .nav__list {
+    column-gap: 50px;
+  }
+
+  .main__home {
+    color: rgba(255, 255, 255);
+  }
+  .header__background{
+    
+    transition: all 0.5s;
+    opacity: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0);  
+    height: 90px;
+    margin: 0 auto;
+    position: fixed;
+    width: 100%;
+    top: 0; 
+  }
+
+  .introduction{
+    z-index: 900;
+    width: 80%;
+    background: rgb(29, 75, 125);
+    height: 100px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  
+  .intro__text{
+    text-align: center;
+    margin-top: 19px;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  
+
+
+
+
+  
+  
