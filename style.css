@@ -8,7 +8,7 @@
 body {
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: url(/Snow.jpg);
+    background-image: url(/Images/Snow.jpg);
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
@@ -115,10 +115,14 @@ a {
   .introduction{
     z-index: 900;
     width: 80%;
-    background: rgb(29, 75, 125);
-    height: 100px;
+    /*background: rgb(29, 75, 125);*/
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0);  
+    height: 110px;
     position: absolute;
-    top: 50%; left: 50%;
+    top: 35%; left: 50%;
     transform: translate(-50%, -50%);
 
   }
@@ -128,11 +132,99 @@ a {
     margin-top: 19px;
     font-size: 22px;
     color: rgba(255, 255, 255, 0.85);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    
+  }
+
+  .hamburger{
+    z-index: 951;
+    display:none;
+    cursor: pointer;
+  }
+
+  .bar{
+    display:block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+  }
+
+  @media(max-width:730px){
+    .hamburger{
+        display:block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav__list{
+        position: fixed;
+        left:-100%;
+        top: 70px;
+        gap:0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+
+    }
+    .introduction{
+        height: 170px;
+    }
+    .intro__text{
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 0%;
+    }
+    .nav__item{
+        margin: 16px 0;
+    }
+
+    .nav__list.active{
+        left: 0;
+    }
+    .header__background.active{
+        height: 100%;
+        overflow: hidden;
+        margin: 0;
+        opacity: 1;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: 
+        blur(10px);
+    }
+    .header__background{
+        height: 90px;
+        overflow: hidden;
+        margin: 0;
+        opacity: 0;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    body.active{
+        overflow: hidden;
+        
+    }
+    .menu-btn{
+        z-index: 953;
+        display: none;
+        cursor: pointer;
+    }
+
   }
 
   
-
-
 
 
   
