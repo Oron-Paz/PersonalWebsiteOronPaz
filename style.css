@@ -16,6 +16,27 @@ body {
     padding-top: 20px;
     overscroll-behavior: none;
 }
+
+.aboutMe{
+  margin-left: 25%;
+  margin-top: 16%;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+  color: whitesmoke;
+  font-size: 40px;
+}
+.aboutMeText{
+  padding: 3%;
+  margin-top: 20%;
+  font-size: 22px;
+  
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0);  
+  
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -201,12 +222,16 @@ a {
 
     body.active{
         overflow: hidden;
+        position: relative;
         
     }
     .menu-btn{
         z-index: 953;
         display: none;
         cursor: pointer;
+    }
+    .aboutMe{
+      font-size: 30px;
     }
 
   }
